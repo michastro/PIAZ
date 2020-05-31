@@ -1,0 +1,12 @@
+unit Variable_Unit;
+
+interface
+uses blcksock;
+var
+fConnected:boolean;
+tcpSock: TTCPBlockSocket;
+
+implementation
+initialization
+  fConnected:=false;
+end.

@@ -1,0 +1,41 @@
+unit Core;
+
+interface
+function    Get_Declination_Core:Extended;
+procedure   Set_Connected_Core(Value:Boolean);
+procedure   SetupDialog_Core;
+
+implementation
+uses Variable_Unit,Socket;
+
+function    Get_Declination_Core:Extended;
+begin
+
+end;
+
+
+procedure   Set_Connected_Core(Value:Boolean);
+begin
+  if value=fConnected then exit;
+  if Value then //connection
+  begin
+    fConnected:=Connexion;
+  end
+  else          //déconnexion
+  begin
+    Deconnexion;
+    fConnected:=false;
+  end;
+
+end;
+
+procedure   SetupDialog_Core;
+begin
+
+end;
+
+initialization
+  fConnected:=false;
+finalization;
+end.
+

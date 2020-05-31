@@ -1,0 +1,250 @@
+unit PIAZ_TLB;
+
+// ************************************************************************ //
+// AVERTISSEMENT
+// -------
+// Les types déclarés dans ce fichier ont été générés à partir de données lues
+// depuis la bibliothèque de types. Si cette dernière (via une autre bibliothèque de types
+// s'y référant) est explicitement ou indirectement ré-importée, ou la commande "Actualiser"
+// de l'éditeur de bibliothèque de types est activée lors de la modification de la bibliothèque
+// de types, le contenu de ce fichier sera régénéré et toutes les modifications
+// manuellement apportées seront perdues.
+// ************************************************************************ //
+
+// $Rev: 52393 $
+// Fichier généré le 25/05/2020 19:41:55 depuis la bibliothèque de types ci-dessous.
+
+// ************************************************************************  //
+// Biblio. types : D:\Astro\ASCOM\PIAZ\PIAZ (1)
+// LIBID : {416DF296-1136-4BA1-83F6-F7A38485A871}
+// LCID : 0
+// Fichier d'aide :
+// Chaîne d'aide :
+// DepndLst :
+//   (1) v2.0 stdole, (C:\Windows\SysWOW64\stdole2.tlb)
+// SYS_KIND: SYS_WIN32
+// ************************************************************************ //
+{$TYPEDADDRESS OFF} // L'unité doit être compilée sans pointeur à type contrôlé.
+{$WARN SYMBOL_PLATFORM OFF}
+{$WRITEABLECONST ON}
+{$VARPROPSETTER ON}
+{$ALIGN 4}
+
+interface
+
+uses Winapi.Windows, System.Classes, System.Variants, System.Win.StdVCL, Vcl.Graphics, Vcl.OleServer, Winapi.ActiveX;
+
+// *********************************************************************//
+// GUIDS déclarés dans la bibliothèque de types. Préfixes utilisés:
+//   Bibliothèques de types : LIBID_xxxx
+//   CoClasses              : CLASS_xxxx
+//   Interfaces DISP        : DIID_xxxx
+//   Interfaces Non-DISP    : IID_xxxx
+// *********************************************************************//
+const
+  // Versions mineure et majeure de la bibliothèque de types
+  PIAZMajorVersion = 1;
+  PIAZMinorVersion = 0;
+
+  LIBID_PIAZ: TGUID = '{416DF296-1136-4BA1-83F6-F7A38485A871}';
+
+  IID_ITelescope: TGUID = '{2AAA9DCD-C998-47D1-A93E-0D0FD2CF1D09}';
+  CLASS_Telescope: TGUID = '{86D4CB2D-93E1-417D-BA54-95BA09EB5247}';
+  IID_IRate: TGUID = '{D8AB1110-A9EB-4535-8F42-13C37887520A}';
+  CLASS_Rate: TGUID = '{CB444C43-F181-4FF7-B8DF-F0D3BD96C184}';
+  IID_IAxisRates: TGUID = '{8B305188-7117-4BAD-948C-51E4E8F71817}';
+  CLASS_AxisRates: TGUID = '{DC66B316-604E-4D19-A154-75DD59A69E19}';
+  IID_ITrackingRatesCol: TGUID = '{547B9D66-234E-432F-91DF-74284E3CB5CB}';
+  CLASS_TrackingRatesCol: TGUID = '{7ACDAA63-CE65-4AFE-AE9B-ADA5A7E17259}';
+type
+
+// *********************************************************************//
+// Déclaration Forward des types définis dans la bibliothèque de types
+// *********************************************************************//
+  ITelescope = interface;
+  ITelescopeDisp = dispinterface;
+  IRate = interface;
+  IRateDisp = dispinterface;
+  IAxisRates = interface;
+  IAxisRatesDisp = dispinterface;
+  ITrackingRatesCol = interface;
+  ITrackingRatesColDisp = dispinterface;
+
+// *********************************************************************//
+// Déclaration de CoClasses définies dans la bibliothèque de types
+// (REMARQUE: On affecte chaque CoClasse à son Interface par défaut)
+// *********************************************************************//
+  Telescope = ITelescope;
+  Rate = IRate;
+  AxisRates = IAxisRates;
+  TrackingRatesCol = ITrackingRatesCol;
+
+
+// *********************************************************************//
+// Interface :   ITelescope
+// Indicateurs : (4416) Dual OleAutomation Dispatchable
+// GUID :        {2AAA9DCD-C998-47D1-A93E-0D0FD2CF1D09}
+// *********************************************************************//
+  ITelescope = interface(IDispatch)
+    ['{2AAA9DCD-C998-47D1-A93E-0D0FD2CF1D09}']
+    procedure AbortSlew; safecall;
+  end;
+
+// *********************************************************************//
+// DispIntf :    ITelescopeDisp
+// Indicateurs : (4416) Dual OleAutomation Dispatchable
+// GUID :        {2AAA9DCD-C998-47D1-A93E-0D0FD2CF1D09}
+// *********************************************************************//
+  ITelescopeDisp = dispinterface
+    ['{2AAA9DCD-C998-47D1-A93E-0D0FD2CF1D09}']
+    procedure AbortSlew; dispid 1;
+  end;
+
+// *********************************************************************//
+// Interface :   IRate
+// Indicateurs : (4416) Dual OleAutomation Dispatchable
+// GUID :        {D8AB1110-A9EB-4535-8F42-13C37887520A}
+// *********************************************************************//
+  IRate = interface(IDispatch)
+    ['{D8AB1110-A9EB-4535-8F42-13C37887520A}']
+  end;
+
+// *********************************************************************//
+// DispIntf :    IRateDisp
+// Indicateurs : (4416) Dual OleAutomation Dispatchable
+// GUID :        {D8AB1110-A9EB-4535-8F42-13C37887520A}
+// *********************************************************************//
+  IRateDisp = dispinterface
+    ['{D8AB1110-A9EB-4535-8F42-13C37887520A}']
+  end;
+
+// *********************************************************************//
+// Interface :   IAxisRates
+// Indicateurs : (4416) Dual OleAutomation Dispatchable
+// GUID :        {8B305188-7117-4BAD-948C-51E4E8F71817}
+// *********************************************************************//
+  IAxisRates = interface(IDispatch)
+    ['{8B305188-7117-4BAD-948C-51E4E8F71817}']
+  end;
+
+// *********************************************************************//
+// DispIntf :    IAxisRatesDisp
+// Indicateurs : (4416) Dual OleAutomation Dispatchable
+// GUID :        {8B305188-7117-4BAD-948C-51E4E8F71817}
+// *********************************************************************//
+  IAxisRatesDisp = dispinterface
+    ['{8B305188-7117-4BAD-948C-51E4E8F71817}']
+  end;
+
+// *********************************************************************//
+// Interface :   ITrackingRatesCol
+// Indicateurs : (4416) Dual OleAutomation Dispatchable
+// GUID :        {547B9D66-234E-432F-91DF-74284E3CB5CB}
+// *********************************************************************//
+  ITrackingRatesCol = interface(IDispatch)
+    ['{547B9D66-234E-432F-91DF-74284E3CB5CB}']
+  end;
+
+// *********************************************************************//
+// DispIntf :    ITrackingRatesColDisp
+// Indicateurs : (4416) Dual OleAutomation Dispatchable
+// GUID :        {547B9D66-234E-432F-91DF-74284E3CB5CB}
+// *********************************************************************//
+  ITrackingRatesColDisp = dispinterface
+    ['{547B9D66-234E-432F-91DF-74284E3CB5CB}']
+  end;
+
+// *********************************************************************//
+// La classe CoTelescope fournit une méthode Create et CreateRemote pour
+// créer des instances de l'interface par défaut ITelescope exposée
+// par la CoClasse Telescope. Les fonctions sont destinées à être utilisées par
+// les clients désirant automatiser les objets CoClasse exposés par
+// le serveur de cette bibliothèque de types.
+// *********************************************************************//
+  CoTelescope = class
+    class function Create: ITelescope;
+    class function CreateRemote(const MachineName: string): ITelescope;
+  end;
+
+// *********************************************************************//
+// La classe CoRate fournit une méthode Create et CreateRemote pour
+// créer des instances de l'interface par défaut IRate exposée
+// par la CoClasse Rate. Les fonctions sont destinées à être utilisées par
+// les clients désirant automatiser les objets CoClasse exposés par
+// le serveur de cette bibliothèque de types.
+// *********************************************************************//
+  CoRate = class
+    class function Create: IRate;
+    class function CreateRemote(const MachineName: string): IRate;
+  end;
+
+// *********************************************************************//
+// La classe CoAxisRates fournit une méthode Create et CreateRemote pour
+// créer des instances de l'interface par défaut IAxisRates exposée
+// par la CoClasse AxisRates. Les fonctions sont destinées à être utilisées par
+// les clients désirant automatiser les objets CoClasse exposés par
+// le serveur de cette bibliothèque de types.
+// *********************************************************************//
+  CoAxisRates = class
+    class function Create: IAxisRates;
+    class function CreateRemote(const MachineName: string): IAxisRates;
+  end;
+
+// *********************************************************************//
+// La classe CoTrackingRatesCol fournit une méthode Create et CreateRemote pour
+// créer des instances de l'interface par défaut ITrackingRatesCol exposée
+// par la CoClasse TrackingRatesCol. Les fonctions sont destinées à être utilisées par
+// les clients désirant automatiser les objets CoClasse exposés par
+// le serveur de cette bibliothèque de types.
+// *********************************************************************//
+  CoTrackingRatesCol = class
+    class function Create: ITrackingRatesCol;
+    class function CreateRemote(const MachineName: string): ITrackingRatesCol;
+  end;
+
+implementation
+
+uses System.Win.ComObj;
+
+class function CoTelescope.Create: ITelescope;
+begin
+  Result := CreateComObject(CLASS_Telescope) as ITelescope;
+end;
+
+class function CoTelescope.CreateRemote(const MachineName: string): ITelescope;
+begin
+  Result := CreateRemoteComObject(MachineName, CLASS_Telescope) as ITelescope;
+end;
+
+class function CoRate.Create: IRate;
+begin
+  Result := CreateComObject(CLASS_Rate) as IRate;
+end;
+
+class function CoRate.CreateRemote(const MachineName: string): IRate;
+begin
+  Result := CreateRemoteComObject(MachineName, CLASS_Rate) as IRate;
+end;
+
+class function CoAxisRates.Create: IAxisRates;
+begin
+  Result := CreateComObject(CLASS_AxisRates) as IAxisRates;
+end;
+
+class function CoAxisRates.CreateRemote(const MachineName: string): IAxisRates;
+begin
+  Result := CreateRemoteComObject(MachineName, CLASS_AxisRates) as IAxisRates;
+end;
+
+class function CoTrackingRatesCol.Create: ITrackingRatesCol;
+begin
+  Result := CreateComObject(CLASS_TrackingRatesCol) as ITrackingRatesCol;
+end;
+
+class function CoTrackingRatesCol.CreateRemote(const MachineName: string): ITrackingRatesCol;
+begin
+  Result := CreateRemoteComObject(MachineName, CLASS_TrackingRatesCol) as ITrackingRatesCol;
+end;
+
+end.
+

@@ -1,0 +1,183 @@
+// ************************************************************************ //
+// AVERTISSEMENT
+// -------
+// Ce fichier est généré par l'importateur ou l'éditeur de bibliothèques de types.
+// Sauf les erreurs de syntaxe, l'éditeur analysera les modifications apportées au fichier.
+// Toutefois, lors de l'application de changements via l'éditeur, ce fichier sera régénéré
+// et les commentaires et les changements de formatage seront perdus.
+// ************************************************************************ //
+// Fichier généré le 25/05/2020 19:56:15 (- $Rev: 12980 $, 119047984).
+
+[
+  uuid(416DF296-1136-4BA1-83F6-F7A38485A871),
+  version(1.0)
+
+]
+library PIAZ
+{
+
+  importlib("stdole2.tlb");
+  importlib("mscorlib.tlb");
+  importlib("mscorlib.tlb");
+
+  interface ITelescope;
+  coclass Telescope;
+  interface IRate;
+  coclass Rate;
+  interface IAxisRates;
+  coclass AxisRates;
+  interface ITrackingRatesCol;
+  coclass TrackingRatesCol;
+  coclass RateEnum;
+
+  [
+    uuid(40922B45-51B2-4EFB-A7E6-E7F3164F26A2)
+  ]
+  enum TelescopeAxes
+  {
+    axisPrimary = 0,
+    axisSecondary = 1,
+    axisTertiary = 2
+  };
+
+  [
+    uuid(23531996-67A5-4AA4-8E6E-D095097EE663)
+  ]
+  enum GuideDirections
+  {
+    guideNorth = 0,
+    guideSouth = 1,
+    guideEast = 2,
+    guideWest = 3
+  };
+
+  [
+    uuid(7C102251-B2E3-408C-ACA8-A725BAD0593E)
+  ]
+  enum AlignmentModes
+  {
+    algAltAz = 0,
+    algPolar = 1,
+    algGermanPolar = 2
+  };
+
+  [
+    uuid(1DE3F230-1CCB-41E8-A3DE-86B33D1C87E5)
+  ]
+  enum EquatorialCoordinateType
+  {
+    equOther = 0,
+    equLocalTopocentric = 1,
+    equJ2000 = 2,
+    equJ2050 = 3,
+    equB1950 = 4
+  };
+
+  [
+    uuid(FA909E15-774B-48EB-A973-07CC3B1F477A)
+  ]
+  enum PierSide
+  {
+    pierEast = 0,
+    pierWest = 1,
+    pierUnknown = -1
+  };
+
+  [
+    uuid(EF09448B-9635-4684-8AE0-E6F007CF460B)
+  ]
+  enum DriveRates
+  {
+    driveSidereal = 0,
+    driveLunar = 1,
+    driveSolar = 2,
+    driveKing = 3
+  };
+
+  [
+    uuid(2AAA9DCD-C998-47D1-A93E-0D0FD2CF1D09),
+    helpstring("Interface dispatch pour Telescope Objet"),
+    dual,
+    oleautomation
+  ]
+  interface ITelescope: IDispatch
+  {
+    [id(0x00000001)]
+    HRESULT _stdcall AbortSlew(void);
+  };
+
+  [
+    uuid(D8AB1110-A9EB-4535-8F42-13C37887520A),
+    helpstring("Interface dispatch pour Rate Objet"),
+    dual,
+    oleautomation
+  ]
+  interface IRate: IDispatch
+  {
+  };
+
+  [
+    uuid(8B305188-7117-4BAD-948C-51E4E8F71817),
+    helpstring("Interface dispatch pour AxisRates Objet"),
+    dual,
+    oleautomation
+  ]
+  interface IAxisRates: IDispatch
+  {
+  };
+
+  [
+    uuid(547B9D66-234E-432F-91DF-74284E3CB5CB),
+    helpstring("Interface dispatch pour TrackingRatesCol Objet"),
+    dual,
+    oleautomation
+  ]
+  interface ITrackingRatesCol: IDispatch
+  {
+  };
+
+  [
+    uuid(86D4CB2D-93E1-417D-BA54-95BA09EB5247),
+    helpstring("Telescope Objet")
+  ]
+  coclass Telescope
+  {
+    [default] interface ITelescope;
+  };
+
+  [
+    uuid(CB444C43-F181-4FF7-B8DF-F0D3BD96C184),
+    helpstring("Rate Objet")
+  ]
+  coclass Rate
+  {
+    [default] interface IRate;
+  };
+
+  [
+    uuid(DC66B316-604E-4D19-A154-75DD59A69E19),
+    helpstring("AxisRates Objet")
+  ]
+  coclass AxisRates
+  {
+    [default] interface IAxisRates;
+  };
+
+  [
+    uuid(7ACDAA63-CE65-4AFE-AE9B-ADA5A7E17259),
+    helpstring("TrackingRatesCol Objet")
+  ]
+  coclass TrackingRatesCol
+  {
+    [default] interface ITrackingRatesCol;
+  };
+
+  [
+    uuid(2F41C024-4CB4-4A95-BEEE-73CC83D3094C)
+  ]
+  coclass RateEnum
+  {
+    [default] interface IEnumerator;
+  };
+
+};

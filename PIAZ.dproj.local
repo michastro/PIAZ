@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/04/06 11:53:29.000.173,=C:\Users\Michel\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2017/04/06 13:09:46.000.218,=C:\Users\Michel\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2017/04/06 13:10:27.000.497,=C:\Users\Michel\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2017/04/06 13:11:05.000.663,=C:\Users\Michel\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2018/07/30 18:24:23.000.518,=C:\Users\Michel\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:06:44.000.249,=D:\Michel\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:15:38.000.494,D:\Astro\ASCOM\PIAZ\Main.dfm=D:\Michel\Documents\Embarcadero\Studio\Projets\Unit1.dfm</Transaction>
+    <Transaction>2020/05/25 19:15:38.000.494,D:\Astro\ASCOM\PIAZ\Main.pas=D:\Michel\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:15:42.000.304,D:\Astro\ASCOM\PIAZ\PIAZ.dproj=D:\Michel\Documents\Embarcadero\Studio\Projets\Project1.dproj</Transaction>
+    <Transaction>2020/05/25 19:15:57.000.075,=D:\Astro\ASCOM\PIAZ\PIAZ.ridl</Transaction>
+    <Transaction>2020/05/25 19:15:57.000.083,=D:\Astro\ASCOM\PIAZ\PIAZ_TLB.pas</Transaction>
+    <Transaction>2020/05/25 19:17:31.000.190,=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:25:35.000.740,D:\Astro\ASCOM\PIAZ\Telescope_Unit.pas=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:26:12.000.240,=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:34:46.000.870,D:\Astro\ASCOM\PIAZ\Rate_Unit.pas=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:37:39.000.633,=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:37:55.000.703,D:\Astro\ASCOM\PIAZ\AxisRates_Unit.pas=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:41:55.000.417,=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 19:44:18.000.878,D:\Astro\ASCOM\PIAZ\TrackingRatesCol_Unit.pas=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/25 22:24:17.000.618,=D:\Astro\ASCOM\PIAZ\Utils.pas</Transaction>
+    <Transaction>2020/05/26 14:56:28.000.126,=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/26 14:56:35.000.603,D:\Astro\ASCOM\PIAZ\Core.pas=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/26 19:58:02.000.522,=D:\Astro\ASCOM\PIAZ\Variable_Unit.pas</Transaction>
+    <Transaction>2020/05/29 18:15:50.000.853,=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+    <Transaction>2020/05/29 18:16:01.000.887,D:\Astro\ASCOM\PIAZ\Socket.pas=D:\Astro\ASCOM\PIAZ\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

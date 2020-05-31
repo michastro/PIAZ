@@ -1,0 +1,20 @@
+program PIAZ;
+
+uses
+  Vcl.Forms,
+  Main in 'Main.pas' {Form1},
+  PIAZ_TLB in 'PIAZ_TLB.pas',
+  Telescope_Unit in 'Telescope_Unit.pas' {Telescope: CoClass},
+  Rate_Unit in 'Rate_Unit.pas' {Rate: CoClass},
+  AxisRates_Unit in 'AxisRates_Unit.pas' {AxisRates: CoClass};
+
+{$R *.TLB}
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

@@ -1,0 +1,34 @@
+unit Core;
+
+interface
+procedure   Set_Connected_Core(Value:Boolean);
+procedure   SetupDialog_Core;
+
+implementation
+uses Variable_Unit,Socket;
+procedure   Set_Connected_Core(Value:Boolean);
+begin
+  if value=fConnected then exit;
+  if Value then //connection
+  begin
+    Connexion;
+  end
+  else          //déconnexion
+  begin
+    tcpSock.CloseSocket;
+    fConnected:=false;
+  end;
+
+end;
+
+procedure   SetupDialog_Core;
+begin
+
+end;
+initialization
+  fConnected:=false;
+  tcpSock:=TTCPBlockSocket.Create;
+finalization;
+  tcpSock.Free;
+end.
+

@@ -1,0 +1,29 @@
+unit Telescope_Unit;
+
+{$WARN SYMBOL_PLATFORM OFF}
+
+interface
+
+uses
+  ComObj, ActiveX, PIAZ_TLB, StdVcl;
+
+type
+  TTelescope = class(TAutoObject, ITelescope)
+  protected
+    procedure AbortSlew; safecall;
+
+  end;
+
+implementation
+
+uses ComServ;
+
+procedure TTelescope.AbortSlew;
+begin
+
+end;
+
+initialization
+  TAutoObjectFactory.Create(ComServer, TTelescope, Class_Telescope,
+    ciMultiInstance, tmApartment);
+end.

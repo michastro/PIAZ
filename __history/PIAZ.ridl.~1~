@@ -1,0 +1,44 @@
+// ************************************************************************ //
+// AVERTISSEMENT
+// -------
+// Ce fichier est généré par l'importateur ou l'éditeur de bibliothèques de types.
+// Sauf les erreurs de syntaxe, l'éditeur analysera les modifications apportées au fichier.
+// Toutefois, lors de l'application de changements via l'éditeur, ce fichier sera régénéré
+// et les commentaires et les changements de formatage seront perdus.
+// ************************************************************************ //
+// Fichier généré le 25/05/2020 19:25:24 (- $Rev: 12980 $, 117197546).
+
+[
+  uuid(416DF296-1136-4BA1-83F6-F7A38485A871),
+  version(1.0)
+
+]
+library PIAZ
+{
+
+  importlib("stdole2.tlb");
+
+  interface ITelescope;
+  coclass Telescope;
+
+
+  [
+    uuid(2AAA9DCD-C998-47D1-A93E-0D0FD2CF1D09),
+    helpstring("Interface dispatch pour Telescope Objet"),
+    dual,
+    oleautomation
+  ]
+  interface ITelescope: IDispatch
+  {
+  };
+
+  [
+    uuid(86D4CB2D-93E1-417D-BA54-95BA09EB5247),
+    helpstring("Telescope Objet")
+  ]
+  coclass Telescope
+  {
+    [default] interface ITelescope;
+  };
+
+};
