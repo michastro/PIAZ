@@ -2,8 +2,10 @@ unit Core;
 
 interface
 function    Get_Altitude_Core:Extended;
+function    Get_Azimuth_Core:Extended;
 function    Get_Declination_Core:Extended;
 function    Get_RightAscension_Core:Extended;
+function    Get_SiteElevation_Core:Extended;
 procedure   Set_Connected_Core(Value:Boolean);
 procedure   SetupDialog_Core;
 
@@ -13,11 +15,21 @@ uses Variable_Unit,Socket;
 function Get_Altitude_Core:Extended;
 begin
   try
-    fAltitude:=GetReel('GAl');
+    fAltitude:=GetReel('GHa');
   except
     fAltitude:=0;
   end;
   result:=fAltitude;
+end;
+
+function Get_Azimuth_Core:Extended;
+begin
+  try
+    fAzimuth:=GetReel('GAz');
+  except
+    fAzimuth:=0;
+  end;
+  result:=fAzimuth;
 end;
 
 function Get_Declination_Core:Extended;
@@ -38,6 +50,16 @@ begin
     fRightAscension:=0;
   end;
   result:=fRightAscension;
+end;
+
+function Get_SiteElevation_Core:Extended;
+begin
+  try
+    fSiteElevation:=GetReel('GAl');
+  except
+    fSiteElevation:=0;
+  end;
+  result:=fSiteElevation;
 end;
 
 procedure   Set_Connected_Core(Value:Boolean);
