@@ -1,18 +1,20 @@
 unit Core;
 
 interface
-function    Get_Altitude_Core:Extended;
-function    Get_Azimuth_Core:Extended;
-function    Get_Declination_Core:Extended;
-function    Get_RightAscension_Core:Extended;
-function    Get_SiteElevation_Core:Extended;
+function    Get_Altitude_Core:double;
+function    Get_Azimuth_Core:double;
+function    Get_Declination_Core:double;
+function    Get_RightAscension_Core:double;
+function    Get_SiteElevation_Core:double;
 procedure   Set_Connected_Core(Value:Boolean);
+procedure  Set_TargetDeclination_Core(Value: Double);
+procedure  Set_TargetRightAscension_Core(Value: Double);
 procedure   SetupDialog_Core;
 
 implementation
 uses Variable_Unit,Socket;
 
-function Get_Altitude_Core:Extended;
+function Get_Altitude_Core:double;
 begin
   try
     fAltitude:=GetReel('GHa');
@@ -22,7 +24,7 @@ begin
   result:=fAltitude;
 end;
 
-function Get_Azimuth_Core:Extended;
+function Get_Azimuth_Core:double;
 begin
   try
     fAzimuth:=GetReel('GAz');
@@ -32,7 +34,7 @@ begin
   result:=fAzimuth;
 end;
 
-function Get_Declination_Core:Extended;
+function Get_Declination_Core:double;
 begin
   try
     fDeclination:=GetReel('GDe');
@@ -42,17 +44,17 @@ begin
   result:=fDeclination;
 end;
 
-function Get_RightAscension_Core:Extended;
+function Get_RightAscension_Core:double;
 begin
   try
-    fRightAscension:=GetReel('GAd');
+    fRightAscension:=GetReel('GRa');
   except
     fRightAscension:=0;
   end;
   result:=fRightAscension;
 end;
 
-function Get_SiteElevation_Core:Extended;
+function Get_SiteElevation_Core:double;
 begin
   try
     fSiteElevation:=GetReel('GAl');
@@ -74,7 +76,16 @@ begin
     Deconnexion;
     fConnected:=false;
   end;
+end;
 
+procedure  Set_TargetDeclination_Core(Value: Double);
+begin
+  SetReel('TDe',Value);
+end;
+
+procedure  Set_TargetRightAscension_Core(Value: Double);
+begin
+  SetReel('TRa',Value);
 end;
 
 procedure   SetupDialog_Core;

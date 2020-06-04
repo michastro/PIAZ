@@ -3,8 +3,8 @@ unit Socket;
 interface
   Function Connexion:boolean;
   Procedure Deconnexion;
-  Function GetReel(Code:AnsiString):extended;
-
+  Function GetReel(Code:AnsiString):double;
+  procedure SetReel(Code:AnsiString;Value:double);
 implementation
 
 uses Variable_Unit,SysUtils,BlckSock;
@@ -24,12 +24,18 @@ begin
   tcpSock.CloseSocket;
 end;
 
-Function GetReel(Code:AnsiString):extended;
+Function GetReel(Code:AnsiString):double;
 Var Reponse: AnsiString;
 begin
   tcpSock.SendBlock(Code);
   Reponse:=tcpSock.RecvBlock(2000);
   result:=StrToFloat(Reponse);
+end;
+
+procedure SetReel(Code:AnsiString;Value:double);
+begin
+  tcpSock.SendBlock(Code);
+  tcpSock.SendBlock(FloatToStr(Value));
 end;
 
 Initialization

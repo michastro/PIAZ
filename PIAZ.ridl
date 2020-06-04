@@ -6,7 +6,7 @@
 // Toutefois, lors de l'application de changements via l'éditeur, ce fichier sera régénéré
 // et les commentaires et les changements de formatage seront perdus.
 // ************************************************************************ //
-// Fichier généré le 25/05/2020 22:24:17 (- $Rev: 12980 $, 127930437).
+// Fichier généré le 31/05/2020 16:16:16 (- $Rev: 12980 $, 624261015).
 
 [
   uuid(416DF296-1136-4BA1-83F6-F7A38485A871),
@@ -17,7 +17,6 @@ library PIAZ
 {
 
   importlib("stdole2.tlb");
-  importlib("mscorlib.tlb");
   importlib("mscorlib.tlb");
 
   interface ITelescope;

@@ -18,7 +18,7 @@ procedure Remet2Pi(Var Angle:Double);
 Function CalculeTSL(DateTime:TdateTime;Longitude:Double):Double;
 
 {Calcul l'angle horaire}
-function AH(long,alpha :extended;GMT : integer):extended;
+function AH(long,alpha :double;GMT : integer):double;
 
 {Calcul vitesse relative de King}
 Function getKingSpeedCorrection(AH,Delta,Latitude:Double):Double;
@@ -96,9 +96,9 @@ Begin
   CalculeTSL:=Teta;
 end;
 
-function AH(long,alpha :extended;GMT : integer):extended;    {Angle Horaire}
+function AH(long,alpha :double;GMT : integer):double;    {Angle Horaire}
 var
-   temp:extended;
+   temp:double;
 begin
    Temp:=CalculeTSL(Now+GMT/24,long)-alpha;
    if (temp>pi) then temp:=temp-2*pi;

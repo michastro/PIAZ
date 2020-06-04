@@ -18,7 +18,7 @@ type
     Bevel1: TBevel;
     Button1: TButton;
     Label1: TLabel;
-    Timer1: TTimer;
+    Timer: TTimer;
     Label2: TLabel;
     LabelSlewing: TLabel;
     Label3: TLabel;
@@ -30,12 +30,16 @@ type
     Label5: TLabel;
     LabelConnect: TLabel;
     Label6: TLabel;
-    LabelAlt: TLabel;
+    LabelSiteElevation: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    LabelAzimuth: TLabel;
+    LabelAltitude: TLabel;
     procedure SetupDialogClick(Sender: TObject);
     procedure ChooserClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-    procedure Timer1Timer(Sender: TObject);
+    procedure TimerTimer(Sender: TObject);
     procedure ConnectClick(Sender: TObject);
     procedure DisconnectClick(Sender: TObject);
   private
@@ -82,7 +86,6 @@ begin
    Chsr := CreateOLEObject('DriverHelper.Chooser');
 end;
 
-
 procedure TForm1.Button1Click(Sender: TObject);
 var count:integer;
    i:integer;
@@ -116,7 +119,7 @@ begin
 
 end;
 
-procedure TForm1.Timer1Timer(Sender: TObject);
+procedure TForm1.TimerTimer(Sender: TObject);
 var Slewing:variant;
 begin
    If TelescopeOK then
@@ -128,7 +131,9 @@ begin
 //         LabelSlewing.Caption:='False';
          LabelASC.Caption:=FloatToStr(TheTelescope.RightAscension);
          LabelDEC.Caption:=FloatToStr(TheTelescope.Declination);
-         LabelAlt.Caption:=FloatToStr(TheTelescope.Altitude);
+         LabelAzimuth.Caption:=FloatToStr(TheTelescope.Azimuth);
+         LabelAltitude.Caption:=FloatToStr(TheTelescope.Altitude);
+         LabelSiteElevation.Caption:=FloatToStr(TheTelescope.SiteElevation);
          LabelConnect.Caption:='true';
       end
       else
@@ -144,11 +149,13 @@ end;
 procedure TForm1.ConnectClick(Sender: TObject);
 begin
    TheTelescope.Connected:=true;
+   Timer.Enabled:=true;
 end;
 
 procedure TForm1.DisconnectClick(Sender: TObject);
 begin
    TheTelescope.Connected:=false;
+   Timer.Enabled:=false;
 end;
 
 end.

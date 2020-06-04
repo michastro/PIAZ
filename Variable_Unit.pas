@@ -5,7 +5,7 @@ uses blcksock;
 var
 fConnected:boolean;
 tcpSock: TTCPBlockSocket;
-fDeclination,fRightAscension,fAltitude:extended;
+fDeclination,fRightAscension,fAzimuth,fAltitude,fSiteElevation:double;
 
 implementation
 initialization
